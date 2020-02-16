@@ -7,10 +7,10 @@ public class Boss
 
     public void Magic() {
         mp -= 5;
-        if (mp < 5) {
-            Debug.Log("MPが足りません");
-        } else {
+        if (mp > 0) {
             Debug.Log("魔法攻撃をした。残りMPは" + mp);
+        } else {
+            Debug.Log("MPが足りません");
         }
     }
 }
@@ -22,7 +22,7 @@ public class Test2 : MonoBehaviour
     {
         Boss lastboss = new Boss();
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 11; i++)
             lastboss.Magic();
     }
 
